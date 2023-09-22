@@ -1,0 +1,164 @@
+/* Reset default list styles and remove padding and margin */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the list items */
+.nav-item {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add space between list items */
+    position: relative; /* Create a positioning context for the pseudo-element */
+}
+
+/* Style the anchor links */
+.nav-item a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+/* Add a line below each navigation item on hover */
+.nav-item:hover::after {
+    content: ''; /* Create a pseudo-element */
+    display: block;
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: #333; /* Line color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth line width transition */
+}
+
+/* Change the line width on hover */
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Header styles */
+header {
+    background-color: white;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-heading {
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+    margin-top: -21px;
+}
+
+/* Main content styles */
+.content {
+    display: grid; /* Use CSS Grid to create a two-column layout */
+    grid-template-columns: 1fr 1fr; /* Divide the content into two equal columns */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the "About Me" section on the left */
+.about {
+    /* Add your styles for the "About Me" section here */
+}
+
+/* Style the image on the right */
+.my-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Add your styles for the image here */
+}
+
+.my-picture img {
+    max-width: 24rem;
+    height: auto;
+    border-radius: 50%; /* Makes the image round */
+}
+
+/* Section styles for the contact section */
+.contact {
+    text-align: center;
+}
+
+/* Style the social icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover (e.g., blue) */
+}
+
+/* Style the iframe itself */
+#my-resume {
+    width: 100%;
+    height: 54rem;
+    border: 1px solid #ccc;
+}
+
+/* Style the container for all projects */
+.all-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style individual project cards */
+.project {
+    flex-basis: calc(33.33% - 20px); /* Adjust as needed, minus margin */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Style project titles */
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Style project description */
+.project p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Style links */
+.project a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Style links on hover */
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Hover effect on project cards */
+.project:hover {
+    transform: translateY(-5px); /* Add a subtle lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
